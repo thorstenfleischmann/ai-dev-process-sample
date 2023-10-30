@@ -7,8 +7,8 @@ const server = http.createServer((request, response) => {
         response.end();
     } catch (error) {
         console.error(error);
-        response.writeHead(500, { 'Content-Type': 'text/plain' });
-        response.write('Internal Server Error');
+        response.writeHead(500, { 'Content-Type': 'text/html' });
+        response.write('<h1>Internal Server Error');
         response.end();
     }
 });
